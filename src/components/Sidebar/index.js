@@ -37,7 +37,7 @@ const Sidebar = () => (
         <a
          target = "_blank"
           rel="noreferrer"
-          href="https://github.com/dashboard"
+          href="https://github.com/sanket622"
           >
          <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
         </a>
@@ -46,7 +46,7 @@ const Sidebar = () => (
         <a
          target = "_blank"
           rel="noreferrer"
-          href="https://www.linkedin.com/in/sanket-kumar-417689255/"
+          href="https://www.linkedin.com/in/sanket622/"
           >
          <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
         </a>
