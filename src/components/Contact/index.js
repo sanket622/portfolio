@@ -48,7 +48,7 @@ const Contact = () => {
             />
           </h1>
           <p>
-            I am interested in freelance opportunities - especially on ambitious
+            I am interested in MERN - especially on ambitious
             or large projects. However, if you have any other requests or
             questions, don't hesitate to contact me using below form either.
           </p>
@@ -89,7 +89,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="info-map">
-          sanket singh,
+          sanket kumar,
           <br />
           India,
           <br />
