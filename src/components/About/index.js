@@ -9,49 +9,47 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.scss'
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Loader from 'react-loaders'
 
-const About = () =>{
+const About = () => {
 
-  const [letterClass,setLetterClass] = useState('text-animate')
+  const [letterClass, setLetterClass] = useState('text-animate')
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-        setLetterClass('text-animate-hover');
-    }, 3000);
+      setLetterClass('text-animate-hover')
+    }, 3000)
 
-    return () => clearTimeout(timeoutId); // Clear the timeout when the component unmounts
-}, []);
+    return () => clearTimeout(timeoutId) // Clear the timeout when the component unmounts
+  }, [])
 
-    return(
-      <>
-        <div className='container about-page'>
+  return (
+    <>
+      <div className='container about-page'>
         <div className='text-zone'>
-        <h1>
-            <AnimatedLetters 
-            letterClass={letterClass}
-                strArray={['A','b','o','u','t',' ','m','e']}
-                idx={15}
+          <h1>
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
+              idx={15}
             />
-        </h1>
-        <p>
-            I'm a very ambitious MERN developer looking for a role in an
-            established IT company with the opportunity to work with the latest
-            technologies on challenging and diverse projects.
+          </h1>
+          <p>
+            I am a passionate and dedicated software developer specializing in creating 
+            dynamic and user-friendly web applications. My journey in programming began 
+            with a fascination for problem-solving and has evolved into a love for coding 
+            and building meaningful solutions.
           </p>
           <p align="LEFT">
-            I'm quiet confident that my passion for my work will not only contribute to my personal
-            growth but will also add value to the organization.
+            With expertise in technologies such as React, Angular, JavaScript, and CSS, 
+            I enjoy designing and implementing responsive interfaces. I'm also skilled 
+            in backend development, ensuring seamless integration of functionality and design. 
+            Collaboration and continuous learning are at the core of my professional philosophy.
           </p>
-          <p>
-            If I need to define myself in one sentence that would be a responsible team-player,
-            a sports fanatic, music lover and tech-obsessed!!!
-          </p>
-
         </div>
-         <div className='stage-cube-cont'>
-         <div className="cubespinner">
+        <div className='stage-cube-cont'>
+          <div className="cubespinner">
             <div className="face1">
               <FontAwesomeIcon icon={faAngular} color="#DD0031" />
             </div>
@@ -71,12 +69,11 @@ const About = () =>{
               <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
             </div>
           </div>
-         </div>
         </div>
-        <Loader type='pacman' />
-        </>
-        
-    )
+      </div>
+      <Loader type='pacman' />
+    </>
+  )
 }
 
 export default About

@@ -1,4 +1,5 @@
 import logos from '../../assets/images/logos.jpg';
+import myPic from '../../assets/images/my-pic.jpg'; 
 import {Link} from 'react-router-dom';
 import './index.scss';
 import { useEffect, useState } from 'react';
@@ -43,7 +44,10 @@ const Home = () => {
        </h1>
        <h2> Software Developer / Javascript Expert</h2>
        <Link to="/contact" className='flat-button'>CONTACT ME</Link>
-     </div>
+       </div>
+       <div className='picture-zone'>
+          <img src={myPic} alt="My Profile" className='my-pic' />
+        </div>
      </div>
      <Loader type="pacman" />
      </>
