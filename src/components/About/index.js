@@ -41,7 +41,7 @@ const About = () => {
             with a fascination for problem-solving and has evolved into a love for coding 
             and building meaningful solutions.
           </p>
-          <p align="LEFT">
+          <p>
             With expertise in technologies such as React, Angular, JavaScript, and CSS, 
             I enjoy designing and implementing responsive interfaces. I'm also skilled 
             in backend development, ensuring seamless integration of functionality and design. 
