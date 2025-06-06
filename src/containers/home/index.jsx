@@ -15,7 +15,7 @@ const Home = () =>{
         <h1>
             Hello, I'm Sanket
             <br/>
-            MERN Developer
+            MEA(R)N Developer
         </h1>
         </div>
         <Animate
