@@ -1,19 +1,33 @@
+
+
+:root{
+
+  --yellow-theme-background-color: #1d1d1d;
+  --yellow-theme-main-color: #ffdd40;
+  --yellow-theme-sub-text-color: #ffffff;
+  --yellow-theme-nav-background-color: #181818;
+  
+}
+
+*{
+
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+  scroll-behaviour:smooth;
+  
+}
+
 html{
   font-size:62.5%;
+  height:100%;
 }
 
-body {
-  margin: 0;
-  font: 300 11px/1.4 'Helvetica Neue', sans-serif;
-  color: #444;
-  background: #022c43;
-  overflow:hidden;
-  display:block;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  background: var(--yellow-theme-background-color);
+  height:100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+  height:100%;
 }

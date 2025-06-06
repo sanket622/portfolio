@@ -1,22 +1,51 @@
+import { Routes ,Route, useLocation} from 'react-router-dom';
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadFull } from 'tsparticles';
+import Home from './containers/home';
+import Skills from './containers/skills';
+import Portfolio from './containers/portfolio';
+import Contact from './containers/contact';
+import About from './containers/about';
+import Resume from './containers/resume';
+import Navbar from './components/navBar';
+import particles from './utils/particles';
 import './App.scss';
-import { Routes ,Route} from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-
 
 function App() {
+
+  const location = useLocation();
+
+  const handleInit = initParticlesEngine (async (engine) => {
+    await loadFull(engine);
+  }, []);
+
+  const renderParticleInJsHomePage = location.pathname === "/"
+
   return (
-  <>
-    <Routes>
-      <Route path="/" element ={<Layout />}> 
-      <Route index element={<Home />} />
-      <Route path='about' element={<About />} />
-      <Route path='contact' element={<Contact />} />
-      </Route>
-    </Routes>
-  </>
+  <div className='App'>
+{/* {particles js} */}
+
+{
+  renderParticleInJsHomePage && 
+  <Particles id="particles" options={particles} init={handleInit}/>
+}
+
+
+{/* {navbar js} */}
+<Navbar/>
+
+{/* {main page content} */}
+<div className='App__main-page-content'>
+<Routes>
+  <Route index path="/" element={<Home/>} />
+  <Route index path="/skills" element={<Skills/>} />
+  <Route index path="/portfolio" element={<Portfolio/>} />
+  <Route index path="/contact" element={<Contact/>} />
+  <Route index path="/about" element={<About/>} />
+  <Route index path="/resume" element={<Resume/>} />
+</Routes>
+</div>
+  </div>
   );
 }
 
