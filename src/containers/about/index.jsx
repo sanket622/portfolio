@@ -30,7 +30,7 @@ const personalDetails = [
 ]
 
 const jobSummary =
-  'Passionate Software Engineer skilled in Java, Spring Boot, Microservices, and the MEA(R)N stack. Experienced in building secure RESTful APIs, scalable SPAs, and deploying applications on AWS. Strong background in PostgreSQL, MongoDB, real-time data streaming with Kafka, and CI/CD pipelines with Docker and GitLab. MCA graduate from Pondicherry University with solid problem-solving and creative thinking skills.'
+  'Passionate Software Engineer skilled in Java, Spring Boot, Microservices, and the MERN stack. Experienced in building secure RESTful APIs, scalable SPAs, and deploying applications on AWS. Strong background in PostgreSQL, MongoDB, real-time data streaming with Kafka, and CI/CD pipelines with Docker and GitLab. MCA graduate from Pondicherry University with solid problem-solving and creative thinking skills.'
 
 const About = () => {
   return (
