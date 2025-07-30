@@ -30,7 +30,7 @@ const personalDetails = [
 ]
 
 const jobSummary =
-  'Passionate Software Engineer skilled in Java, Spring Boot, Microservices, and the MERN stack. Experienced in building secure RESTful APIs, scalable SPAs, and deploying applications on AWS. Strong background in PostgreSQL, MongoDB, real-time data streaming with Kafka, and CI/CD pipelines with Docker and GitLab. MCA graduate from Pondicherry University with solid problem-solving and creative thinking skills.'
+  'MERN Stack Developer with 1.4 years of experience in building scalable web applications using MongoDB, Express.js, React.js, and Node.js. Skilled in RESTful API development, Redux state management, and JWT authentication. Passionate about delivering clean, maintainable code and collaborating in agile teams to create high-performance solutions.'
 
 const About = () => {
   return (
@@ -53,7 +53,7 @@ const About = () => {
             transform: 'translateY(0)',
           }}
         >
-          <h3>MEA(R)N Developer</h3>
+          <h3>MERN Developer</h3>
           <p>{jobSummary}</p>
         </Animate>
 
