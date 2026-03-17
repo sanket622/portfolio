@@ -7,7 +7,6 @@ import ImageThree from '../../images/image3.jpg'
 import ImageFour from '../../images/image4.jpg'
 import ImageFive from '../../images/image5.jpg'
 import './styles.scss'
-import { Link } from 'react-router-dom'
 
 const portfolioData = [
   {
