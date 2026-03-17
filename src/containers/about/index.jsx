@@ -3,21 +3,13 @@ import { BsInfoCircleFill } from 'react-icons/bs'
 import PageHeaderContent from '../../components/pageHeaderContent'
 import { Animate } from 'react-simple-animate'
 import './styles.scss'
-import {DiApple, DiAndroid} from 'react-icons/di'
-import {FaDev, FaDatabase} from 'react-icons/fa'
+import { FaJava, FaDatabase, FaServer, FaCloud } from 'react-icons/fa'
+import { SiSpringboot, SiApachekafka, SiDocker, SiKubernetes } from 'react-icons/si'
 
 const personalDetails = [
   {
     label: 'Name',
     value: 'Sanket Kumar',
-  },
-  {
-    label: 'Age',
-    value: '26',
-  },
-  {
-    label: 'Address',
-    value: 'Ward no. 17 , laxamana nagar ringh bandh , sitamarhi, Bihar , 843302',
   },
   {
     label: 'Email',
@@ -27,10 +19,23 @@ const personalDetails = [
     label: 'Phone',
     value: '9102800988',
   },
+  {
+    label: 'Location',
+    value: 'Bihar, India',
+  },
 ]
 
 const jobSummary =
-  'MERN Stack Developer with 1.4 years of experience in building scalable web applications using MongoDB, Express.js, React.js, and Node.js. Skilled in RESTful API development, Redux state management, and JWT authentication. Passionate about delivering clean, maintainable code and collaborating in agile teams to create high-performance solutions.'
+  'Full Stack Java Developer with hands-on experience in building scalable microservices-based applications using Java, Spring Boot, and React.js. Experienced in developing secure REST APIs with JWT authentication, implementing event-driven architectures using Kafka, and deploying cloud-native applications with Docker, Kubernetes, and AWS. Strong background in building enterprise systems like Loan Management, Healthcare Analytics, and E-commerce platforms with focus on performance, scalability, and clean architecture.'
+
+const highlights = [
+  'Built Loan Management System with Spring Boot microservices and React (Redux Toolkit)',
+  'Implemented JWT-based authentication and role-based dashboards',
+  'Developed Spring Batch processing for healthcare analytics',
+  'Worked with Kafka for event-driven architecture and async processing',
+  'Deployed applications using Docker, Kubernetes, and AWS',
+  'Implemented Redis caching and CI/CD pipelines with Jenkins',
+]
 
 const About = () => {
   return (
@@ -39,76 +44,70 @@ const About = () => {
         headerText="About Me"
         icon={<BsInfoCircleFill size={40} />}
       />
+
       <div className="about__content">
 
-      <div className='about__content__personalWrapper'>
-      <Animate
-          play
-          duration={1.5}
-          delay={1}
-          start={{
-            transform: 'translateX(-900px)',
-          }}
-          end={{
-            transform: 'translateY(0)',
-          }}
-        >
-          <h3>MERN Developer</h3>
-          <p>{jobSummary}</p>
-        </Animate>
+        <div className='about__content__personalWrapper'>
+          <Animate
+            play
+            duration={1.5}
+            delay={1}
+            start={{ transform: 'translateX(-900px)' }}
+            end={{ transform: 'translateY(0)' }}
+          >
+            <h3>Full Stack Java Developer</h3>
+            <p>{jobSummary}</p>
 
-        <Animate
-          play
-          duration={1.5}
-          delay={1}
-          start={{
-            transform: 'translateX(500px)',
-          }}
-          end={{
-            transform: 'translateY(0)',
-          }}
-        >
+            <h3 className='personalInformationHeaderText'>Key Highlights</h3>
+            <ul>
+              {highlights.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </Animate>
 
-        <h3 className='personalInformationHeaderText'>Personal Information</h3>
-        <ul>
-          {
-            personalDetails.map((item,i)=>(
-              <li key={i}>
-                <span className='title'>{item.label}</span>
-                <span className='value'>{item.value}</span>
-              </li>
-            ))
-          }
-        </ul>
-        </Animate></div>
-      <div className='about__content__servicesWrapper'>
-      <Animate
-          play
-          duration={1.5}
-          delay={1}
-          start={{
-            transform: 'translateX(500px)',
-          }}
-          end={{
-            transform: 'translateY(0)',
-          }}
-        >
-      <div className='about__content__servicesWrapper__innerContent'>
-      <div>
-          <FaDev size={60} color='var( --yellow-theme-main-color)'/>
+          <Animate
+            play
+            duration={1.5}
+            delay={1}
+            start={{ transform: 'translateX(500px)' }}
+            end={{ transform: 'translateY(0)' }}
+          >
+            <h3 className='personalInformationHeaderText'>Personal Information</h3>
+            <ul>
+              {personalDetails.map((item, i) => (
+                <li key={i}>
+                  <span className='title'>{item.label}</span>
+                  <span className='value'>{item.value}</span>
+                </li>
+              ))}
+            </ul>
+          </Animate>
         </div>
-        <div>
-        <DiAndroid size={60} color='var( --yellow-theme-main-color)'/>
+
+        <div className='about__content__servicesWrapper'>
+          <Animate
+            play
+            duration={1.5}
+            delay={1}
+            start={{ transform: 'translateX(500px)' }}
+            end={{ transform: 'translateY(0)' }}
+          >
+            <div className='about__content__servicesWrapper__innerContent'>
+
+              <div><FaJava size={60} color='var(--yellow-theme-main-color)' /></div>
+              <div><SiSpringboot size={60} color='var(--yellow-theme-main-color)' /></div>
+              <div><FaServer size={60} color='var(--yellow-theme-main-color)' /></div>
+              <div><SiApachekafka size={60} color='var(--yellow-theme-main-color)' /></div>
+              <div><FaDatabase size={60} color='var(--yellow-theme-main-color)' /></div>
+              <div><SiDocker size={60} color='var(--yellow-theme-main-color)' /></div>
+              <div><SiKubernetes size={60} color='var(--yellow-theme-main-color)' /></div>
+              <div><FaCloud size={60} color='var(--yellow-theme-main-color)' /></div>
+
+            </div>
+          </Animate>
         </div>
-        <div>
-        <FaDatabase size={60} color='var( --yellow-theme-main-color)'/>
-        </div>
-        <div>
-        <DiApple size={60} color='var( --yellow-theme-main-color)'/>
-        </div>
-      </div>
-      </Animate>
-      </div>
+
       </div>
     </section>
   )
